@@ -23,7 +23,7 @@ Este projeto foi feito utilizando as seguintes tecnologias:
 - [Dotenv](https://www.npmjs.com/package/dotenv)
 - [Nodemon](https://www.npmjs.com/package/nodemon)
 
-## 🪐 Running
+## 🪐 Execução 
 
 Para executar o aplicativo...
 

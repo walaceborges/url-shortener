@@ -3,7 +3,7 @@ import Shortener from './components/Shortener';
 
 function App() {
   return (
-    <div className="App">
+    <div className="text-center">
       <Shortener />
     </div>
   );

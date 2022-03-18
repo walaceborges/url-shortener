@@ -17,7 +17,12 @@ function Shortener() {
 
     const parsedResponse = await response.json();
     setNewUrl(parsedResponse.newUrl);
+    clearInput();
   };
+
+  function clearInput() {
+    setUrl('');
+  }
 
   return (
     <section>
@@ -28,7 +33,7 @@ function Shortener() {
           onChange={(e) => { setUrl(e.target.value)}} 
           value={url} 
           type="text" 
-          name="url" 
+          name="url"
         />
         <div className=''>
           <button className='h-12 xl:w-40 md:w-28 w-24 border-0 rounded-r-lg font-medium text-xl bg-[#FF9DF5] hover:brightness-100 text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:ring-pink-300 dark:focus:ring-pink-800'>Encurtar</button>

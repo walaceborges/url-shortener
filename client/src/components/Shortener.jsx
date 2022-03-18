@@ -20,20 +20,22 @@ function Shortener() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>  
+    <section>
+      <form onSubmit={handleSubmit} className='flex justify-center items-center'>  
         <input
-          className='rounded-full border-2 px-3 my-4 text-center'
-          placeholder='Paste URL to short'
+          className='bg-[#EEEEEE] h-12 border-2 my-7 text-center text-xl font-extralight rounded-l-lg w-5/12'
+          placeholder='Cole seu link aqui'
           onChange={(e) => { setUrl(e.target.value)}} 
           value={url} 
           type="text" 
           name="url" 
-        />
-        <button>Encurtar</button>
+          />
+          <div>
+            <button className='h-12 border-2 rounded-r-lg font-semibold text-xl bg-[#FF9DF5] hover:brightness-150 z-10 relative'>Encurtar</button>
+          </div>
       </form>
       <p className="text-red-800">{newUrl}</p>
-    </div>
+    </section>
   )
 }
 

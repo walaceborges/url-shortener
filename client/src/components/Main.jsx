@@ -2,7 +2,7 @@ import React from 'react'
 
 function Main() {
   return (
-    <main className="flex flex-col items-center pt-32">
+    <main className="flex flex-col items-center pt-36">
       <div className="pb-10">
         <h1 className="logo text-7xl">Cuttly</h1>
       </div>

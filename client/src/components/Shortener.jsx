@@ -23,16 +23,16 @@ function Shortener() {
     <section>
       <form onSubmit={handleSubmit} className='flex justify-center items-center'>  
         <input
-          className='bg-[#EEEEEE] h-12 border-2 my-7 text-center text-xl font-extralight rounded-l-lg w-5/12'
+          className='bg-[#EEEEEE] h-12 border-0 my-7 text-start pl-4 text-xl font-extralight rounded-l-lg w-8/12 md:w-3/12 lg:w-4/12'
           placeholder='Cole seu link aqui'
           onChange={(e) => { setUrl(e.target.value)}} 
           value={url} 
           type="text" 
           name="url" 
-          />
-          <div>
-            <button className='h-12 border-2 rounded-r-lg font-semibold text-xl bg-[#FF9DF5] hover:brightness-150 z-10 relative'>Encurtar</button>
-          </div>
+        />
+        <div className=''>
+          <button className='h-12 xl:w-40 md:w-28 w-24 border-0 rounded-r-lg font-medium text-xl bg-[#FF9DF5] hover:brightness-100 text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:ring-pink-300 dark:focus:ring-pink-800'>Encurtar</button>
+        </div>
       </form>
       <p className="text-red-800">{newUrl}</p>
     </section>

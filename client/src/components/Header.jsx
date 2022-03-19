@@ -1,14 +1,14 @@
 import React from 'react';
 import Moon from "../assets/moon-svgrepo-com.svg";
 
-function Header() {
+function Header(props) {
   return (
     <nav className="flex justify-around pt-20">
       <div>
         <span class="logo font-medium text-2xl md:text-4xl">Cuttly</span>
       </div>
       <div className="flex items-center">
-        <img className="pr-5 md:pr-14 md:w-20" src={Moon} alt="Moon" />
+        <img className="pr-5 md:pr-14 md:w-20" src={Moon} onClick={ () => {props.toggleDarkMode(true)} } alt="Moon" />
         <a 
           href="https://github.com/walaceborges" 
           target="_blank" 

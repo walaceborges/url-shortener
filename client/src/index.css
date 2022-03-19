@@ -13,3 +13,7 @@
 .logo {
   font-family: 'Satisfy', cursive;
 }
+
+.justify-rigth {
+  justify-content: right; 
+}

@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 // import imgCopy from '../assets/copy-svgrepo-com.svg';
 
 function Shortener() {
   const [url, setUrl] = useState('');
   const [newUrl, setNewUrl] = useState('');
+  // const [copy, setCopy] = useState('');
   const [error, setError] = useState('');
   
   const handleSubmit = async (e) => {
@@ -26,7 +27,14 @@ function Shortener() {
 
   function clearInput() {
     setUrl('');
-  }
+  };
+
+  function copyText() {
+    const search = document.getElementById('inputResult');
+    const resultSearch = search.innerText;
+    navigator.clipboard.writeText(resultSearch);
+    alert("Copied the text: " + resultSearch);
+  };
 
   function responseError(error) {
     if (error === 'Invalid URL. Try again.') {
@@ -52,14 +60,20 @@ function Shortener() {
         </div>
       </form>
       {error ? 
-      <div className="absolute z-10 justify-center flex py-8 h-16 w-1/3 m-auto bg-red-500 dark:bg-black rounded items-center">
+      <div className="z-10 justify-center flex py-8 h-16 w-1/3 m-auto bg-red-500 dark:bg-[#0E0F22] rounded items-center">
         <div className="">
           <p className="flex items-center font-medium text-3xl text-white">{error}</p>
         </div>
       </div> : (
       <div className="z-10 absolute justify-center left-1/3 flex py-8 h-16 w-1/3 m-auto bg-[#E84192] rounded items-center">
         <div className="">
-          <p className="flex items-center font-medium text-3xl text-black">{newUrl}</p>
+          <p 
+            onClick={() => {copyText()}} 
+            id="inputResult" 
+            className="flex items-center font-medium text-3xl text-black"
+          >
+            {newUrl}
+          </p>
         </div>
       </div>
       )}

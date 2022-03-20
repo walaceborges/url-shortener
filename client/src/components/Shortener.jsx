@@ -38,9 +38,9 @@ function Shortener() {
 
   function responseError(error) {
     if (error === 'Invalid URL. Try again.') {
-      setError('MENSAGEM 1');
+      setError('URL inválida. Tente novamente.');
     } else if (error === 'Bad Request: body must contain the following format: { url: "example.com" }'){
-      setError('MENSAGEM 2');
+      setError('Por favor, insira uma URL');
     }
   };
 

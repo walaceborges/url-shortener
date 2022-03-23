@@ -17,3 +17,23 @@
 .justify-rigth {
   justify-content: right; 
 }
+
+.custom-shape-divider-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(133% + 1.3px);
+  height: 194px;
+}
+
+.custom-shape-divider-bottom .shape-fill {
+  fill: #E53A8B;
+}

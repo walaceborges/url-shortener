@@ -33,7 +33,7 @@ function Shortener() {
     const search = document.getElementById('inputResult');
     const resultSearch = search.innerText;
     navigator.clipboard.writeText(resultSearch);
-    alert("Copied the text: " + resultSearch);
+    alert("URL copiada com sucesso");
   };
 
   function responseError(error) {
@@ -45,12 +45,12 @@ function Shortener() {
   };
 
   return (
-    <section className=''>
+    <section className='dark:bg-[#0E0F22]'>
       <form onSubmit={handleSubmit} className='flex justify-center items-center pb-4 z-10'>  
         <input
           className='bg-[#EEEEEE] h-12 border-0 my-7 text-start pl-4 text-xl font-light rounded-l-lg w-8/12 md:w-3/12 lg:w-4/12'
           placeholder='Cole seu link aqui ...'
-          onChange={(e) => { setUrl(e.target.value)}} 
+          onChange={ (e) => { setUrl(e.target.value)} } 
           value={url} 
           type="text" 
           name="url"
@@ -60,7 +60,7 @@ function Shortener() {
         </div>
       </form>
       {error ? 
-      <div className="z-10 justify-center flex py-8 h-16 w-1/3 m-auto bg-red-500 dark:bg-[#0E0F22] rounded items-center">
+      <div className="z-10 justify-center flex py-8 h-16 w-1/3 m-auto bg-red-500 rounded items-center">
         <div className="">
           <p className="flex items-center font-medium text-3xl text-white">{error}</p>
         </div>
@@ -68,9 +68,9 @@ function Shortener() {
       <div className="z-10 absolute justify-center left-1/3 flex py-8 h-16 w-1/3 m-auto bg-[#E84192] rounded items-center">
         <div className="">
           <p 
-            onClick={() => {copyText()}} 
+            onClick={ () => {copyText()} } 
             id="inputResult" 
-            className="flex items-center font-medium text-3xl text-black"
+            className="flex items-center font-medium text-3xl text-black cursor-pointer"
           >
             {newUrl}
           </p>

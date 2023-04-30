@@ -25,7 +25,7 @@ Este projeto foi feito utilizando as seguintes tecnologias:
 
 ## 🪐 Execução 
 
-Para executar o aplicativo...
+Para executar o aplicativo..
 
 ```bash
 # Clone o repositório
